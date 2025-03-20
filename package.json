@@ -18,5 +18,8 @@
   "description": "",
   "dependencies": {
     "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
   }
 }
