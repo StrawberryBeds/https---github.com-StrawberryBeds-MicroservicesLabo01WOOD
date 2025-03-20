@@ -15,5 +15,8 @@
     "url": "https://github.com/StrawberryBeds/https---github.com-StrawberryBeds-MicroservicesLabo01WOOD/issues"
   },
   "homepage": "https://github.com/StrawberryBeds/https---github.com-StrawberryBeds-MicroservicesLabo01WOOD#readme",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "path": "^0.12.7"
+  }
 }
