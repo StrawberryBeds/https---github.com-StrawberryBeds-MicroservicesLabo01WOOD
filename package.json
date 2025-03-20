@@ -1,0 +1,19 @@
+{
+  "name": "microserviceslabo01wood",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StrawberryBeds/https---github.com-StrawberryBeds-MicroservicesLabo01WOOD.git"
+  },
+  "author": "Samuel Wood",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/StrawberryBeds/https---github.com-StrawberryBeds-MicroservicesLabo01WOOD/issues"
+  },
+  "homepage": "https://github.com/StrawberryBeds/https---github.com-StrawberryBeds-MicroservicesLabo01WOOD#readme",
+  "description": ""
+}
