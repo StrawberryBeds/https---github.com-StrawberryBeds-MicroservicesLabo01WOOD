@@ -1,19 +1,18 @@
-console.log("Hello World! Node is present!");
-
 const path = require('path');
 const fs = require('fs');
-// const filePath = '/Users/samuelwood/Documents/Microservices/MicroservicesLabo01WOOD/config/data.json';
-// console.log(path.isAbsolute('/Users/samuelwood/Documents/Microservices/MicroservicesLabo01WOOD/config/data.json'));  // true​
-// console.log(filePath);
+const data = require("./config/data");
 
 const fileContent = fs.readFileSync(path.join(__dirname, 'config', 'data.json'), 'utf8');
 const jsonData = JSON.parse(fileContent);
 
 console.log(jsonData);
 
-fs.appendFile(path.join(__dirname, 'config', 'data.json'), 'testing text', (err) => {
-        if (err) throw error;
-    console.log('append complete');
+let newTask = { id: '3', task: 'Créer mon app', done: false }
+data.push(newTask)
+
+fs.writeFile(path.join(__dirname, 'config', 'data.json'), JSON.stringify(data), (err) => {
+        if (err) throw err;
+    console.log('Write complete');
 })
 
 
