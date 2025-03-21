@@ -1,16 +1,24 @@
 const path = require('path');
 const fs = require('fs');
-const data = require("./config/data");
-const logEvents = require("./logEvents");
 
+const data = require("./config/data");
+
+const logEvents = require("./logEvents");
+const EventEmitter = require('events');
+
+class MyEmitter extends EventEmitter { };
+const myEmitter = new MyEmitter();
+
+myEmitter.on('log', (message) => logEvents(message));
+myEmitter.emit('log', 'Log event emitted');
 
 const fileContent = fs.readFileSync(path.join(__dirname, 'config', 'data.json'), 'utf8');
 const jsonData = JSON.parse(fileContent);
 
-console.log(jsonData);
+// console.log(jsonData);
 
-let newTask = { id: '3', task: 'Créer mon app', done: false }
-data.push(newTask)
+// let newTask = { id: '3', task: 'Créer mon app', done: false }
+// data.push(newTask)
 
 fs.writeFile(path.join(__dirname, 'config', 'data.json'), JSON.stringify(data), (err) => {
         if (err) throw err;

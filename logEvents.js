@@ -1,4 +1,5 @@
 const dayjs = require('dayjs');
+// const { v4: uuid } = require('uuid');
 
 const fs = require('fs');
 const fsPromises = require('fs').promises;
@@ -12,12 +13,8 @@ const logEvents = async(message) => {
     try {
         await fsPromises.appendFile(path.join(__dirname, 'config','eventLog.txt'), logItem);
     } catch (err) {
-        console.err(err);
+        console.log(err);
     }
 }
 
-module.exports = logEvents('Hello from logEvents!');
-
-
-// console.log(format(new Date(), 'yyyyMMdd\tHH:mm:SS'))
-// console.log(uuid())
+module.exports = logEvents;
