@@ -17,9 +17,11 @@
   "homepage": "https://github.com/StrawberryBeds/https---github.com-StrawberryBeds-MicroservicesLabo01WOOD#readme",
   "description": "",
   "dependencies": {
+    "dayjs": "^1.11.13",
     "fs": "^0.0.1-security",
     "http-server": "^14.1.1",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "uuid": "^11.1.0"
   },
   "devDependencies": {
     "nodemon": "^3.1.9"
