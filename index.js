@@ -1,8 +1,7 @@
 const path = require('path');
 const fs = require('fs');
-const dayjs = require('dayjs')
 const data = require("./config/data");
-const uuid = require('uuid')
+const logEvents = require("./logEvents");
 
 
 const fileContent = fs.readFileSync(path.join(__dirname, 'config', 'data.json'), 'utf8');
