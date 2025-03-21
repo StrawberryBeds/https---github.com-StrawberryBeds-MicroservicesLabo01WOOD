@@ -11,6 +11,12 @@ const jsonData = JSON.parse(fileContent);
 
 console.log(jsonData);
 
+fs.appendFile(path.join(__dirname, 'config', 'data.json'), 'testing text', (err) => {
+        if (err) throw error;
+    console.log('append complete');
+})
+
+
 // fs.readFileSync(filePath, 'utf-8',(err, data) => {
 //     if (err) throw error;
 //     console.log(data);
