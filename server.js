@@ -1,6 +1,15 @@
 // Importer le module http
 const http = require('http');
 
+const logEvents = require("./logEvents");
+const EventEmitter = require('events');
+
+class MyEmitter extends EventEmitter { };
+const myEmitter = new MyEmitter();
+
+myEmitter.on('log', (message) => logEvents(message));
+myEmitter.emit('log', 'Log event emitted');
+
 // Créer un serveur HTTP
 const server = http.createServer((req, res) => {
   // Définir le type de contenu de la réponse

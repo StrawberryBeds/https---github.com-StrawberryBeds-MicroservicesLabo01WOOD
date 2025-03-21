@@ -11,7 +11,7 @@ const logEvents = async(message) => {
     const logItem = `${dateTime}\t${message}\n`;
     console.log(logItem);
     try {
-        await fsPromises.appendFile(path.join(__dirname, 'config','eventLog.txt'), logItem);
+        await fsPromises.appendFile(path.join(__dirname, 'logs','eventLog.txt'), logItem);
     } catch (err) {
         console.log(err);
     }
