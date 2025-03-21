@@ -18,6 +18,7 @@
   "description": "",
   "dependencies": {
     "fs": "^0.0.1-security",
+    "http-server": "^14.1.1",
     "path": "^0.12.7"
   },
   "devDependencies": {
